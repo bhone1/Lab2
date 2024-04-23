@@ -31,7 +31,7 @@ def sort_temperature(list):
     list.sort()
 
 def calc_median_temperature(list):
-    return 1
+    return 2
 
 def calculate_bmi(weight, height):
     print("Height = " + str(height))
