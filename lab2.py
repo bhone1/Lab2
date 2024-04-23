@@ -1,5 +1,10 @@
 def main():
-    calculate_bmi(1,1)
+    display_main_menu()
+    temp = get_user_input()
+    print(calc_average_temperature(temp))
+    print(calc_min_max_temperature(temp))
+    print("Median : ")
+    print(calc_median_temperature(temp))
 
 
 def display_main_menu():
@@ -14,15 +19,14 @@ def get_user_input():
     return user_input_list
 
 
-
-
 def calc_average_temperature(tempr_list):
+    total = 0
     for x in tempr_list:
         total += x
     return total / len(tempr_list)
 
 def calc_min_max_temperature(tempr_list):
-    sort_temperature()
+    sort_temperature(tempr_list)
     min = tempr_list[0]
     max = tempr_list[-1]
     return [min, max]
@@ -31,7 +35,14 @@ def sort_temperature(list):
     list.sort()
 
 def calc_median_temperature(list):
-    return 2
+    list.sort()
+    length = len(list)
+    if length % 2 != 0:
+        return list[int((length - 1) / 2)]
+    else:
+        median1 = list[int((length -1) / 2)]
+        median2 = (list[int((length -1) / 2) + 1]) / 2
+        return (median1 + median2) / 2
 
 def calculate_bmi(weight, height):
     print("Height = " + str(height))
