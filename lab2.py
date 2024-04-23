@@ -37,8 +37,11 @@ def calc_median_temperature(list):
     if length % 2 != 0:
         return list[int((length - 1) / 2)]
     else:
-        median1 = list[int((length -1) / 2)]
-        median2 = (list[int((length -1) / 2) + 1]) / 2
+        #last_index = length - 1
+        #median1 = list[last_index // 2]
+        #median2 = list[(last_index // 2) + 1]
+        median1 = list[int((length - 1) / 2)]
+        median2 = (list[int((length - 1) / 2) + 1]) / 2
         return (median1 + median2) / 2
 
 def calculate_bmi(weight, height):
