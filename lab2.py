@@ -20,10 +20,7 @@ def get_user_input():
 
 
 def calc_average_temperature(tempr_list):
-    total = 0
-    for x in tempr_list:
-        total += x
-    return total / len(tempr_list)
+    return sum(tempr_list) / len(tempr_list)
 
 def calc_min_max_temperature(tempr_list):
     sort_temperature(tempr_list)
