@@ -22,13 +22,14 @@ def calc_average_temperature(tempr_list):
     return sum(tempr_list) / len(tempr_list)
 
 def calc_min_max_temperature(tempr_list):
-    sort_temperature(tempr_list)
+    tempr_list = sort_temperature(tempr_list)
     min = tempr_list[0]
     max = tempr_list[-1]
     return [min, max]
 
 def sort_temperature(list):
     list.sort()
+    return list
 
 def calc_median_temperature(list):
     list.sort()
