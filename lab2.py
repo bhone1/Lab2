@@ -14,8 +14,7 @@ def get_user_input():
     user_input = input()
     #split the string into a list
     user_input_list = user_input.split(",")
-    for i in range(len(user_input_list)):
-        user_input_list[i] = float(user_input_list[i])
+    user_input_list = [float(x) for x in user_input_list]
     return user_input_list
 
 
