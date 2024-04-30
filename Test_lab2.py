@@ -1,4 +1,5 @@
 import lab2.lab2 as lab2
+print("Test lab2")
 
 def test_min_max():
     test_input = [10, 2, 38, 23, 38, 23, 21]
