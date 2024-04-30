@@ -1,4 +1,4 @@
-import lab2.lab2 as lab2
+import lab2 as lab2
 print("Test lab2")
 
 def test_min_max():
@@ -11,4 +11,4 @@ def test_calc_avg():
 
 def test_calc_median():
     test_input = [10, 2, 38, 23, 38, 23, 21]
-    assert(lab2.calc_median_temperature() == 23)
+    assert(lab2.calc_median_temperature(test_input) == 23)
